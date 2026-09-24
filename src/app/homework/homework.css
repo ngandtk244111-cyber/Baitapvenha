@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  border: 1px solid blue;
+  background: gray;
+  float: left;
+  text-indent: 0;
+}
+
+/* Chỉ menu cấp 1 nằm ngang */
+#container > ul {
+  list-style: none;
+  display: flex;
+}
+
+/* Các li cấp 1 */
+#container > ul > li {
+  position: relative;
+}
+
+/* Tất cả link */
+#container ul li a {
+  display: block;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.3em 6px;
+}
+
+/* Hover link */
+#container li a:hover {
+  color: white;
+  background: orange;
+}
+
+/* Menu con: mặc định ẩn */
+#container li ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  width: 10em;
+  background: gray;
+  list-style: none;
+}
+
+/* Rê chuột vào li cha thì hiện ul con */
+#container li:hover > ul {
+  display: block;
+}
+
+/* Li trong menu con xếp dọc */
+#container li ul li {
+  width: 100%;
+  border: 1px solid green;
+}
